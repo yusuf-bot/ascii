@@ -1,20 +1,20 @@
-🖼️ ##ASCII Art Converter with Color Support
+##ASCII Art Converter with Color Support
 This is a Python script that converts images into ASCII art, with optional ANSI 24-bit color support, enhanced grayscale conversion, and dark/light mode rendering. It supports resizing and produces output suitable for viewing in terminals that support ANSI colors (like VS Code Terminal or Windows Terminal).
 
-📸 ###Features
-✅ -Adjustable output height
+###Features
+-Adjustable output height
 
-🎨 -Optional true-color ANSI escape codes (great for terminal rainbow mode)
+-Optional true-color ANSI escape codes (great for terminal rainbow mode)
 
-🌗 -Light and dark mode for ASCII contrast
+-Light and dark mode for ASCII contrast
 
-🧠 -Improved grayscale conversion with luminance weighting
+-Improved grayscale conversion with luminance weighting
 
-🔍 -Auto contrast and image enhancement before ASCII conversion
+-Auto contrast and image enhancement before ASCII conversion
 
-💾 -Outputs to a .txt file
+-Outputs to a .txt file
 
-🚀 ##Usage
+##Usage
 1. Install dependencies
 ```bash
 pip install pillow numpy
@@ -33,7 +33,7 @@ python ascii_art.py image.jpg --output art.txt --height 80 --dark --colour
 --dark, -d	Use dark characters on light background (inverted ramp)
 --colour, -c	Enable colorized ASCII output using ANSI escape codes
 
-💡 ##Example
+##Example
 
 python ascii_art.py lena.png --output lena_art.txt --colour --height 60
 Then view it in a terminal that supports ANSI colors:
@@ -48,7 +48,7 @@ or alternatively
 type lena_art.txt
 ```
 
-✅ Works best in:
+##Works best in:
 
 VS Code Terminal
 
@@ -58,26 +58,25 @@ iTerm2 (macOS)
 
 less -R or bat for viewing with color support
 
-📦 Output
+##Output
 By default, the ASCII art is written to ascii_art.txt. It uses a set of ASCII characters based on brightness:
 
-text
-Copy
-Edit
+```text
 ['@@', '$$', '##', '**', '!!', '==', ';;', '::', '~~', '--', ',,', '..','  ']
 And in color mode, each character is printed with the original pixel color using 24-bit ANSI escape codes.
+```
 
-⚠️ Notes
+##⚠️ Notes
 Make sure your output terminal supports ANSI escape codes and truecolor (RGB) rendering.
 
 File output is meant for terminal display; standard text editors won't render the colors.
 
-🧪 Tips
+##🧪 Tips
 View colored output with cat ascii_art.txt in a supported terminal.
 
 For longer viewing: less -R ascii_art.txt
 
 To create rainbow effects, use colorful input images and --colour flag.
 
-📄 License
+##📄 License
 MIT – use and modify freely. Credit is appreciated.
